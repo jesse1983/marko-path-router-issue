@@ -1,0 +1,30 @@
+{
+  "name": "router",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development -w",
+    "start": "node index.js",
+    "postinstall": "webpack --mode development"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^0.28.10",
+    "koa": "^2.5.0",
+    "marko": "^4.9.1",
+    "marko-loader": "git+https://github.com/jesse1983/marko-loader.git",
+    "marko-path-router": "^0.7.2",
+    "style-loader": "^0.20.2",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.3",
+    "babel-preset-env": "^1.6.1",
+    "uglifyjs-webpack-plugin": "^1.2.2",
+    "webpack": "^4.1.1"
+  }
+}

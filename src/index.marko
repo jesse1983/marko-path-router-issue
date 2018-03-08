@@ -1,0 +1,25 @@
+<!-- Routes -->
+$ const routes = [{ path: '/admin', component: require('./components/home'), nestedRoutes: [
+        { path: '/categories', component: require('./components/home/components/categories'), nestedRoutes: [
+            { path: '/furniture', component: require('./components/home/components/categories/components/furniture') },        
+            { path: '/beauty', component: require('./components/home/components/categories/components/beauty') },        
+        ]},
+        { path: '/users', component: require('./components/home/components/users') },
+    ]
+}];
+
+<!-- HTML -->
+div.my-app.container
+  div.app-header
+    h1.display-1 -- marko-path-router
+    div.row
+      div.col
+        nav.nav.flex-column
+          router-link class="nav-link" path='/admin' -- Home
+          router-link class="nav-link" path='/admin/categories' -- Categories        
+          nav.nav.flex-column
+            router-link class="nav-link ml-3" path='/admin/categories/furniture' -- Furniture        
+            router-link class="nav-link ml-3" path='/admin/categories/beauty' -- Beauty                    
+          router-link class="nav-link" path='/admin/users' -- Users                 
+      div.col-10 no-update
+        router routes=routes initialRoute=window.location.pathname
