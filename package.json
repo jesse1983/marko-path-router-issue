@@ -15,7 +15,7 @@
     "koa": "^2.5.0",
     "marko": "^4.9.1",
     "marko-loader": "git+https://github.com/jesse1983/marko-loader.git",
-    "marko-path-router": "^0.7.2",
+    "marko-path-router": "https://github.com/charlieduong94/marko-path-router/archive/1b13f235d6488907999f9eec1b5dad60453d45bf.tar.gz",
     "style-loader": "^0.20.2",
     "webpack-cli": "^2.0.10",
     "webpack-dev-server": "^3.1.0"
