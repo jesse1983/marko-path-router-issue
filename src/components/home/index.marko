@@ -1,3 +1,15 @@
-div.admin
+class {
+    onCreate() {
+        this.state = { name: '' }
+    }
+    onMount() {
+        // --- BUG ---- 
+        // I believe the bug appears when I change state after component was created
+        this.setState({ name: 'foo bar' });
+    }
+}
+
+div.admin 
+    h1 -- Welcome, ${ state.name }
     if(input.renderBody)
         include(input.renderBody)
